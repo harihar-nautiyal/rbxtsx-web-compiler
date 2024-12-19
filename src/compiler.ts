@@ -137,14 +137,19 @@ export class Compiler {
         if (root.Name === className) {
             results.push(root);
         }
-
+    
         for (const child of root.GetChildren()) {
             if (child.Name === className) {
                 results.push(child);
             }
-            results.push(...this.findElementsByClassName(child, className));
+            
+            // Get child results and add them individually
+            const childResults = this.findElementsByClassName(child, className);
+            for (const result of childResults) {
+                results.push(result);
+            }
         }
-
+    
         return results;
     }
 
@@ -152,9 +157,9 @@ export class Compiler {
         return str.find(searchStr)[0] !== undefined;
     }
 
-    private matchString(str: string, pattern: string): string[] | null {
+    private matchString(str: string, pattern: string): string[] | undefined {
         const result = str.match(pattern);
-        if (!result) return null;
+        if (!result) return undefined;
         
         const matches: string[] = [];
         for (let i = 0; i < result.size(); i++) {
