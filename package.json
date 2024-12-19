@@ -1,0 +1,50 @@
+{
+  "name": "@rbxtsx/web-compile",
+  "version": "0.0.1-Alpha",
+  "main": "out/init.lua",
+  "scripts": {
+    "build": "rbxtsc",
+    "watch": "rbxtsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harihar-nautiyal/rbxtsx-web-compiler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/harihar-nautiyal/rbxtsx-web-compiler/issues"
+  },
+  "homepage": "https://github.com/harihar-nautiyal/rbxtsx-web-compiler#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "roblox",
+    "typescript",
+    "react",
+    "html",
+    "css",
+    "compiler",
+    "webcompile",
+    "gui"
+  ],
+  "author": "Harihar Nautiyal",
+  "license": "MIT",
+  "description": "HTML and CSS compiler for Roblox using React",
+  "types": "out/index.d.ts",
+  "files": [
+    "out",
+    "!**/*.tsbuildinfo"
+  ],
+  "devDependencies": {
+    "@rbxts/compiler-types": "^3.0.0-types.0",
+    "@rbxts/types": "^1.0.813",
+    "roblox-ts": "^3.0.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@rbxts/react": "^17.2.3",
+    "@rbxts/roact": "^3.0.1"
+  }
+}
