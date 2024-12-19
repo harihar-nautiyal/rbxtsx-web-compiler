@@ -1,6 +1,6 @@
 {
-  "name": "@rbxtsx/web-compile",
-  "version": "0.0.2-Alpha",
+  "name": "@rbxtsx/web-compiler",
+  "version": "0.0.3-Alpha",
   "main": "out/init.lua",
   "scripts": {
     "build": "rbxtsc",

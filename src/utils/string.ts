@@ -50,3 +50,11 @@ export function trim(str: string): string {
     return result;
   }
   
+
+  export function arrayLength(arr: any[]): number {
+    let count = 0;
+    for (const _ of arr) {
+      count++;
+    }
+    return count;
+  }
